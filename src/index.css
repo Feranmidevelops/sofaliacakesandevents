@@ -1,0 +1,89 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background-color: #fefcf8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-amber-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-600 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply border-2 border-amber-500 text-amber-600 px-6 py-2 rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300;
+  }
+  .container-max {
+    @apply max-w-[1280px] mx-auto px-6;
+  }
+}
+
+/* Carousel styles */
+.carousel-scroll {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.carousel-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+.carousel-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.carousel-scroll::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 10px;
+}
+.carousel-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+.animate-fade-in { animation: fadeIn 0.5s ease-out; }
+.animate-slide-down { animation: slideDown 0.4s ease-out; }
+.animate-slide-up { animation: slideUp 0.4s ease-out; }
+.animate-scale-up { animation: scaleUp 0.3s ease-out; }
+.animate-bounce-slow { animation: bounce-slow 2s infinite; }

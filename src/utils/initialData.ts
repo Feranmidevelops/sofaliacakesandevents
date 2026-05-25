@@ -1,0 +1,26 @@
+// src/utils/initialData.ts
+import type { Product } from '../types';
+
+export const initialProducts: Product[] = [
+  // Catering
+  { id: '1', segment: 'Catering', name: 'Premium Buffet Package', description: 'Full-course buffet with 10+ dishes, suitable for 50-100 guests.', price: '₦250,000', imageUrl: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '2', segment: 'Catering', name: 'Finger Food Delights', description: 'Assorted finger foods, perfect for cocktail parties.', price: '₦85,000', imageUrl: 'https://images.pexels.com/photos/2606894/pexels-photo-2606894.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '3', segment: 'Catering', name: 'African Cuisine Platter', description: 'Traditional Jollof, Egusi, and more.', price: '₦120,000', imageUrl: 'https://images.pexels.com/photos/2067420/pexels-photo-2067420.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '4', segment: 'Catering', name: 'Seafood Extravaganza', description: 'Grilled lobster, prawns, and special sauces.', price: '₦320,000', imageUrl: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '5', segment: 'Catering', name: 'Vegetarian Feast', description: 'Healthy and delicious vegetarian options.', price: '₦95,000', imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '6', segment: 'Catering', name: 'Dessert Table Setup', description: 'Assorted pastries and sweets.', price: '₦70,000', imageUrl: 'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  // Cake Making & Pastries
+  { id: '7', segment: 'Cake Making & Pastries', name: '3-Tier Wedding Cake', description: 'Elegant fondant cake with floral accents.', price: '₦150,000', imageUrl: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '8', segment: 'Cake Making & Pastries', name: 'Birthday Cake (Custom)', description: 'Personalized design for any age.', price: '₦45,000', imageUrl: 'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '9', segment: 'Cake Making & Pastries', name: 'Cupcake Dozen', description: '12 delicious cupcakes with buttercream.', price: '₦15,000', imageUrl: 'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '10', segment: 'Cake Making & Pastries', name: 'Macaron Box', description: 'French macarons assorted flavors.', price: '₦12,000', imageUrl: 'https://images.pexels.com/photos/956999/pexels-photo-956999.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '11', segment: 'Cake Making & Pastries', name: 'Chocolate Ganache Cake', description: 'Rich chocolate cake with ganache drip.', price: '₦55,000', imageUrl: 'https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '12', segment: 'Cake Making & Pastries', name: 'Fruit Tart Platter', description: 'Seasonal fruit tarts for events.', price: '₦28,000', imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  // Gift Items
+  { id: '13', segment: 'Gift Items', name: 'Luxury Chocolate Box', description: 'Premium Belgian chocolates.', price: '₦25,000', imageUrl: 'https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '14', segment: 'Gift Items', name: 'Spa Hamper', description: 'Relaxation set with candles and oils.', price: '₦40,000', imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '15', segment: 'Gift Items', name: 'Personalized Mug & Cake', description: 'Custom mug + mini cake combo.', price: '₦18,000', imageUrl: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '16', segment: 'Gift Items', name: 'Anniversary Gift Set', description: 'Wine + chocolate + rose bouquet.', price: '₦65,000', imageUrl: 'https://images.pexels.com/photos/2067420/pexels-photo-2067420.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '17', segment: 'Gift Items', name: 'Kids Party Pack', description: 'Goodie bags + small cakes.', price: '₦22,000', imageUrl: 'https://images.pexels.com/photos/2606894/pexels-photo-2606894.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+  { id: '18', segment: 'Gift Items', name: 'Corporate Gift Box', description: 'Branded cookies and treats.', price: '₦35,000', imageUrl: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' },
+];
