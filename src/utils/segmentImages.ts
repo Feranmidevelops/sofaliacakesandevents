@@ -1,57 +1,30 @@
-// src/utils/segmentImages.ts
 import type { Segment } from '../types';
 
+
+export const segmentImageMap: Record<Segment, string[]> = {
+  Catering: [
+    'https://images.unsplash.com/photo-1555939594-58d7cb561e1f?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1564015231837-f0e26dfa8c82?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1555939594-58d7cb561e1f?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=500&h=300&fit=crop',
+  ],
+  'Cake Making & Pastries': [
+    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=300&fit=crop',
+  ],
+  'Gift Items': [
+    'https://images.unsplash.com/photo-1549465120-7beef77a357f?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1549465120-7beef77a357f?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1549465120-7beef77a357f?w=500&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1549465120-7beef77a357f?w=500&h=300&fit=crop',
+  ],
+};
+
 export const getSegmentImages = (segment: Segment): string[] => {
-  const baseImages = [
-    'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/2606894/pexels-photo-2606894.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/2067420/pexels-photo-2067420.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/956999/pexels-photo-956999.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
+  return segmentImageMap[segment] || [
+    'https://via.placeholder.com/500x300?text=' + segment,
   ];
 
-  const segmentSpecific: Record<Segment, string[]> = {
-    Catering: [
-      'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/2606894/pexels-photo-2606894.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/2067420/pexels-photo-2067420.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/956999/pexels-photo-956999.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    ],
-    'Cake Making & Pastries': [
-      'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/956999/pexels-photo-956999.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/956999/pexels-photo-956999.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    ],
-    'Gift Items': [
-      'https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/2067420/pexels-photo-2067420.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/2606894/pexels-photo-2606894.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/956999/pexels-photo-956999.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-      'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
-    ],
-  };
-  return segmentSpecific[segment] || baseImages;
 };

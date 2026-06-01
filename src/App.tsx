@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Policy } from './pages/Policy';
 import { Bookings } from './pages/Bookings';
 import { AdminLogin } from './pages/AdminLogin';
+import { UpdatePassword } from './components/UpdatePassword';
 import { Admin } from './pages/Admin';
 
 function App() {
@@ -19,13 +20,14 @@ function App() {
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/admin/sofaliacakesandevents" element={<AdminLogin />} />
           <Route
-            path="/admin/sofaliacakesandevents/dashboard"
+            path="/admin/dashboard"
             element={
               <ProtectedRoute>
                 <Admin />
               </ProtectedRoute>
             }
           />
+          <Route path="/admin/update-password" element={<UpdatePassword />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
